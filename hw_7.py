@@ -160,6 +160,7 @@ class AddressBook(UserDict):
         else:
             return "Contact not found."
 
+    #спробувати видалити str
     def all_contacts(self):
         if self.data:
             return "\n".join([str(record) for record in self.data.values()])
