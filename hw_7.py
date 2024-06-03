@@ -111,8 +111,10 @@ class Record:
     @input_error
     def birthday(self):
         return self.birthday
-
-
+#або так 
+def __repr__(self):
+    return f"Contact name: {self.name.value}, phones: {', '.join(str(phone.value) for phone in self.phones)}"
+#або так    
 def __str__(self):
     return f"Contact name: {self.name.value}, phones: {', '.join(str(phone.value) for phone in self.phones)}"
 
