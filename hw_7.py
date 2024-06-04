@@ -112,20 +112,9 @@ class Record:
     def birthday(self):
         return self.birthday
         
-  #спробувати видалити str у строці коду      
-def __str__(self):
-    return f"Contact name: {self.name.value}, phones: {', '.join(str(phone.value) for phone in self.phones)}"
- #якщо не буде працювати, погратися з видаленням, коментуванням
-def __repr__(self):
-    return self.__str__()
+    def __str__(self):
+        return f"Contact name: {self.name.value}, phones: {', '.join(str(phone.value) for phone in self.phones)}"
 
-#спробувати такий формат 
-def __str__(self):
-        phones_info = ", ".join(self.phones)
-        if self.birthday:
-            return f"Name: {self.name}, Phones: {phones_info}, Birthday: {self.birthday}"
-        else:
-            return f"Name: {self.name}, Phones: {phones_info}"
 
 class AddressBook(UserDict):
 
@@ -168,7 +157,6 @@ class AddressBook(UserDict):
         else:
             return "Contact not found."
 
-    #спробувати видалити str
     def all_contacts(self):
         if self.data:
             return "\n".join([str(record) for record in self.data.values()])
