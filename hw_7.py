@@ -119,6 +119,14 @@ def __str__(self):
 def __repr__(self):
     return self.__str__()
 
+#спробувати такий формат 
+def __str__(self):
+        phones_info = ", ".join(self.phones)
+        if self.birthday:
+            return f"Name: {self.name}, Phones: {phones_info}, Birthday: {self.birthday}"
+        else:
+            return f"Name: {self.name}, Phones: {phones_info}"
+
 class AddressBook(UserDict):
 
     def __init__(self):
